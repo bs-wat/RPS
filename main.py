@@ -12,7 +12,8 @@ def RPS():
     
     while round < 3:
         computer_choice = random.choice(choices)
-        player_choice = input('Rock, paper, scissors: ').lower()
+        while player_choice not in choices:
+            player_choice = input('Rock, paper or scissors: ').lower()
         print(f'Computer has chosen {computer_choice}.')
         round += 1
         if computer_choice == win_condition[player_choice]:
