@@ -12,6 +12,7 @@ def RPS():
     
     while round < 3:
         computer_choice = random.choice(choices)
+        player_choice = input('Rock, paper or scissors: ').lower()
         while player_choice not in choices:
             player_choice = input('Rock, paper or scissors: ').lower()
         print(f'Computer has chosen {computer_choice}.')
@@ -34,4 +35,5 @@ def RPS():
     else:
         print('You have drawn with the computer.')
 
-RPS()
+if __name__ == "__main__":
+    RPS()
